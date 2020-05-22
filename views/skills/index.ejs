@@ -1,0 +1,23 @@
+<%- include('../partial/base') -%>
+
+
+<h1>My awesome skillset!</h1>
+
+<% skills.forEach(function(i, idx) { %>
+<form action="/skills/<%= idx %> ?_method=DELETE" method='POST'>
+    <button type='submit'>X</button>
+
+
+</form>
+
+
+<a href='/skills/<%= idx%>'><%= i.skill %></a>
+
+<% }); %>
+
+
+
+
+<a href='/skills/new'>Add a awesome new skill</a>
+
+<%- include('../partial/footer') -%>
